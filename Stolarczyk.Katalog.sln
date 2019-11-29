@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stolarczyk.Katalog.UI", "Stolarczyk.Katalog.UI\Stolarczyk.Katalog.UI.csproj", "{9FE463D1-E62E-4BCF-AC20-228876772BDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stolarczyk.Katalog.BL", "Stolarczyk.Katalog.BL\Stolarczyk.Katalog.BL.csproj", "{7601A58F-E137-411C-A2F5-B3E0A1D6E6AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stolarczyk.Katalog.DAO", "Stolarczyk.Katalog.DAO\Stolarczyk.Katalog.DAO.csproj", "{8FDBA1CD-DA64-42B8-95C1-944D5A4EACD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stolarczyk.Katalog.CORE", "Stolarczyk.Katalog.CORE\Stolarczyk.Katalog.CORE.csproj", "{7BC767F1-202E-42D0-9F35-1615DF19D02C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stolarczyk.Katalog.INTERFACES", "Stolarczyk.Katalog.INTERFACES\Stolarczyk.Katalog.INTERFACES.csproj", "{15CD772F-B53E-482D-A6AD-1EDE8101FA39}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FE463D1-E62E-4BCF-AC20-228876772BDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FE463D1-E62E-4BCF-AC20-228876772BDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FE463D1-E62E-4BCF-AC20-228876772BDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FE463D1-E62E-4BCF-AC20-228876772BDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7601A58F-E137-411C-A2F5-B3E0A1D6E6AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7601A58F-E137-411C-A2F5-B3E0A1D6E6AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7601A58F-E137-411C-A2F5-B3E0A1D6E6AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7601A58F-E137-411C-A2F5-B3E0A1D6E6AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FDBA1CD-DA64-42B8-95C1-944D5A4EACD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FDBA1CD-DA64-42B8-95C1-944D5A4EACD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FDBA1CD-DA64-42B8-95C1-944D5A4EACD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FDBA1CD-DA64-42B8-95C1-944D5A4EACD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BC767F1-202E-42D0-9F35-1615DF19D02C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BC767F1-202E-42D0-9F35-1615DF19D02C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BC767F1-202E-42D0-9F35-1615DF19D02C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BC767F1-202E-42D0-9F35-1615DF19D02C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15CD772F-B53E-482D-A6AD-1EDE8101FA39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15CD772F-B53E-482D-A6AD-1EDE8101FA39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15CD772F-B53E-482D-A6AD-1EDE8101FA39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15CD772F-B53E-482D-A6AD-1EDE8101FA39}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {384CA98D-3391-4856-9488-174A6110CC1F}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,49 @@
+﻿ <UserControl x:Class="Stolarczyk.Katalog.UI.View.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Stolarczyk.Katalog.UI.View"
+             xmlns:viewModel="clr-namespace:Stolarczyk.Katalog.UI.ViewModel"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800" d:DataContext="{d:DesignInstance d:Type=viewModel:MainViewModel}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <DockPanel>
+            <Button Width="100" Margin="5" Content="Dodaj nowy" Command="{Binding AddCarCommand}"></Button>
+            <Label Content="Wyszukaj samochód:"></Label>
+            <TextBox Text="{Binding FilterText,Mode=OneWayToSource,UpdateSourceTrigger=PropertyChanged}" Margin="5"></TextBox>
+        </DockPanel>
+        <DataGrid ItemsSource="{Binding Cars}" AutoGenerateColumns="False" Grid.Row="1" Margin="5 10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Marka" Binding="{Binding Brand}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Model" Binding="{Binding Model}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Rok produkcji" Binding="{Binding Year}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Moc silnika" Binding="{Binding MaxPower}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Pojemność silnika" Binding="{Binding Displacement}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Typ paliwa" Binding="{Binding FuelType}"></DataGridTextColumn>
+                <DataGridTemplateColumn Header="Akcje">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Content="Usuń" Command="{Binding Path=DataContext.RemoveCarCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}" CommandParameter="{Binding Id}"></Button>
+                                <Button Content="Edytuj" Command="{Binding Path=DataContext.EditCarCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}" CommandParameter="{Binding Id}"></Button>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Stretch" Margin="5">
+            <Label Margin="5" Content="Producent"></Label>
+            <ComboBox Margin="5" ItemsSource="{Binding Manufacturers}" DisplayMemberPath="Name" SelectedItem="{Binding SelectedManufacturer,Mode=TwoWay}" Width="200"></ComboBox>
+            <Label Margin="5" Content="Typ paliwa"></Label>
+            <ComboBox Margin="5" ItemsSource="{Binding FuelTypes}" SelectedItem="{Binding SelectedFuelType,Mode=TwoWay}" Width="200"></ComboBox>
+            <Button Content="Wyczyść filtry" Margin="5" Width="100" Padding="5" Command="{Binding ClearFiltersCommand}"></Button>
+        </StackPanel>
+    </Grid>
+</UserControl>
